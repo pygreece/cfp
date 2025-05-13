@@ -28,6 +28,7 @@ def assignments() -> None:
     type=click.Path(exists=True, dir_okay=False, readable=True, path_type=pathlib.Path),
     default=SESSIONS_FILE,
     help="Alternative path to a file containing all the session as exported from Pretalx",
+    show_default=True,
 )
 @click.option(
     "--reviewers",
@@ -35,6 +36,7 @@ def assignments() -> None:
     type=click.Path(exists=True, dir_okay=False, readable=True, path_type=pathlib.Path),
     default=REVIEWERS_FILE,
     help="Alternative path to a file containing all the reviewers as exported from Pretalx",
+    show_default=True,
 )
 @click.option(
     "--regen",
